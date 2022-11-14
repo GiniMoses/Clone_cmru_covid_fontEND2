@@ -2,6 +2,7 @@ import 'dart:isolate';
 import 'package:clone_cmru_covid_fontend/screen/cmru_covid_test.dart';
 import 'package:clone_cmru_covid_fontend/screen/home_screen.dart';
 import 'package:clone_cmru_covid_fontend/screen/listcovidtest.dart';
+import 'package:clone_cmru_covid_fontend/screen/printingTEST.dart';
 import 'package:clone_cmru_covid_fontend/screen/stirck.dart';
 import 'package:flutter/material.dart';
 import 'screen/get_queue.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         // When navigating to the "/" route, build the FirstScreen widget.
-        '/': (context) => const HomeScreen(),
+        '/': (context) => const TestScreen(),
         // When navigating to the "/second" route, build the SecondScreen widget.
         '/getcard': (context) => const GetQueue(),
         '/rapidtest': (context) => const RapidTest(),
