@@ -1,17 +1,16 @@
 import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class StrickerScreen extends StatefulWidget {
-  const StrickerScreen({super.key});
+class GetQueue extends StatefulWidget {
+  const GetQueue({super.key});
 
   @override
-  State<StrickerScreen> createState() => _StrickerScreenState();
+  State<GetQueue> createState() => _GetQueueState();
 }
 
-class _StrickerScreenState extends State<StrickerScreen> {
+class _GetQueueState extends State<GetQueue> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -104,7 +103,7 @@ class _StrickerScreenState extends State<StrickerScreen> {
                 padding: const EdgeInsets.only(left: 50),
                 child: SizedBox(
                   child: Text(
-                    "จุดที่3 รับสติกเกอร์",
+                    "จุดที่1 รับบัตรคิว",
                     style: TextStyle(fontSize: 50, color: Colors.white),
                   ),
                 ),
@@ -113,35 +112,62 @@ class _StrickerScreenState extends State<StrickerScreen> {
                 height: 20,
               ),
               SizedBox(height: 30),
-              Center(
-                child: Container(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(
-                        width: 550,
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                              filled: true, //<-- SEE HERE
-                              fillColor: Colors.white,
-                              hintText: 'กรอกหมายเลขบาร์โค๊ดที่นี่',
-                              hintStyle: TextStyle(color: Colors.blueGrey),
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10))),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Container(
-                        child: Column(
-                          children: [
-                            SizedBox(
-                                height: 35, //height of button
-                                width: 140, //width of button
+              Align(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 600,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            width: 550,
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                  filled: true, //<-- SEE HERE
+                                  fillColor: Colors.white,
+                                  hintText: 'กรอกหมายเลขบาร์โค๊ดที่นี่',
+                                  hintStyle: TextStyle(color: Colors.blueGrey),
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10))),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              SizedBox(
+                                width: 140,
+                                height: 35,
                                 child: OutlinedButton.icon(
                                     label: Text(
-                                      'ตรวจสอบผล',
+                                      'รับคิว',
+                                      style: TextStyle(color: Colors.blue),
+                                    ),
+                                    style: OutlinedButton.styleFrom(
+                                      backgroundColor: Colors.black,
+                                      side: BorderSide(
+                                          color: Colors.blue, width: 1),
+                                    ),
+                                    icon: Icon(
+                                      Icons.badge,
+                                      size: 20,
+                                      color: Colors.blue,
+                                    ),
+                                    onPressed: () {}),
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              SizedBox(
+                                width: 140,
+                                height: 35,
+                                child: OutlinedButton.icon(
+                                    label: Text(
+                                      'พิมคิวใหม่',
                                       style:
                                           TextStyle(color: Colors.orangeAccent),
                                     ),
@@ -155,51 +181,14 @@ class _StrickerScreenState extends State<StrickerScreen> {
                                       size: 20,
                                       color: Colors.orange,
                                     ),
-                                    onPressed: () {})
-
-                                // OutlinedButton(
-                                //   style: OutlinedButton.styleFrom(
-                                //     backgroundColor: Colors.black,
-
-                                //     primary: Colors.white,
-                                //     side: BorderSide(
-                                //         color: Colors.orange,
-                                //         width: 1), //<-- SEE HERE
-                                //   ),
-                                //   onPressed: () {},
-                                //   child: const Text(
-                                //     'ตรวจสอบผล',
-                                //     style: TextStyle(fontSize: 15),
-                                //   ),
-                                // ),
-
-                                //     ElevatedButton.icon(
-                                //   onPressed: () {},
-                                //   icon: Icon(
-                                //     Icons.check,
-                                //     size: 24.0,
-                                //   ),
-                                //   style: ButtonStyle(
-                                //     shape: MaterialStateProperty.all<
-                                //         RoundedRectangleBorder>(
-                                //       RoundedRectangleBorder(
-                                //         borderRadius: BorderRadius.circular(18.0),
-                                //         side: BorderSide(
-                                //             color: Colors.orangeAccent),
-                                //       ),
-                                //     ),
-                                //   ),
-                                //   label: Text(
-                                //     'ตรวจสอบผล',
-                                //     style: TextStyle(color: Colors.orangeAccent),
-                                //   ),
-                                // ),
-                                ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
+                                    onPressed: () {}),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],

@@ -4,23 +4,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class reportcovid extends StatefulWidget {
-  const reportcovid({super.key});
+class ReportCovid extends StatefulWidget {
+  const ReportCovid({super.key});
 
   @override
-  State<reportcovid> createState() => _reportcovidState();
+  State<ReportCovid> createState() => _ReportCovidState();
 }
 
-class _reportcovidState extends State<reportcovid> {
+class _ReportCovidState extends State<ReportCovid> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 220, 180, 30),
       body: Container(
-        padding: EdgeInsets.all(300),
+        padding: EdgeInsets.all(100),
         child: Center(
           child: Container(
-            height: 700,
+            height: 600,
+            width: 1000,
             decoration: BoxDecoration(
               color: Color.fromARGB(255, 0, 0, 0),
               borderRadius: BorderRadius.circular(20),
@@ -30,11 +31,13 @@ class _reportcovidState extends State<reportcovid> {
               width: double.infinity,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     'รายงาน',
                     style: TextStyle(
                       color: Colors.white,
+                      fontSize: 40,
                     ),
                   ),
                   SizedBox(
@@ -62,9 +65,8 @@ class _reportcovidState extends State<reportcovid> {
                             ),
                             Text(
                               "0",
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 50),
                             ),
                             Align(
                               alignment: Alignment.bottomRight,
@@ -97,9 +99,8 @@ class _reportcovidState extends State<reportcovid> {
                             ),
                             Text(
                               "0",
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 50),
                             ),
                             Align(
                               alignment: Alignment.bottomRight,
@@ -132,9 +133,8 @@ class _reportcovidState extends State<reportcovid> {
                             ),
                             Text(
                               "0",
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 50),
                             ),
                             Align(
                               alignment: Alignment.bottomRight,
@@ -167,9 +167,8 @@ class _reportcovidState extends State<reportcovid> {
                             ),
                             Text(
                               "0",
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 50),
                             ),
                             Align(
                               alignment: Alignment.bottomRight,
@@ -202,9 +201,8 @@ class _reportcovidState extends State<reportcovid> {
                             ),
                             Text(
                               "0",
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 50),
                             ),
                             Align(
                               alignment: Alignment.bottomRight,
@@ -245,9 +243,8 @@ class _reportcovidState extends State<reportcovid> {
                             ),
                             Text(
                               "0",
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 50),
                             ),
                             Align(
                               alignment: Alignment.bottomRight,
@@ -280,9 +277,8 @@ class _reportcovidState extends State<reportcovid> {
                             ),
                             Text(
                               "0",
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 50),
                             ),
                             Align(
                               alignment: Alignment.bottomRight,
@@ -315,9 +311,8 @@ class _reportcovidState extends State<reportcovid> {
                             ),
                             Text(
                               "0",
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 50),
                             ),
                             Align(
                               alignment: Alignment.bottomRight,
@@ -336,7 +331,7 @@ class _reportcovidState extends State<reportcovid> {
                         height: 150,
                         width: 150,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 194, 104, 52),
+                          color: Color.fromARGB(255, 248, 156, 35),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Column(
@@ -350,9 +345,8 @@ class _reportcovidState extends State<reportcovid> {
                             ),
                             Text(
                               "0",
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 50),
                             ),
                             Align(
                               alignment: Alignment.bottomRight,
@@ -385,9 +379,8 @@ class _reportcovidState extends State<reportcovid> {
                             ),
                             Text(
                               "0",
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 50),
                             ),
                             Align(
                               alignment: Alignment.bottomRight,
@@ -400,8 +393,63 @@ class _reportcovidState extends State<reportcovid> {
                             ),
                           ],
                         ),
-                      )
+                      ),
                     ],
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        height: 100,
+                        width: 900,
+                        color: Colors.white,
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: Text(
+                                'จำนวนที่รับคิวแล้ว',
+                                style: TextStyle(fontSize: 20),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 40, //height of button
+                              width: 150, //width of button
+                              child: OutlinedButton.icon(
+                                  label: Text(
+                                    'ส่งออกเป็น Excel',
+                                    style: TextStyle(color: Colors.blue),
+                                  ),
+                                  style: OutlinedButton.styleFrom(
+                                    backgroundColor: Colors.white,
+                                    side: BorderSide(
+                                        color: Colors.blue, width: 1),
+                                  ),
+                                  icon: Icon(
+                                    Icons.download,
+                                    size: 20,
+                                    color: Colors.blue,
+                                  ),
+                                  onPressed: () {}),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Center(
+                    child: Container(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [Text('data')],
+                      ),
+                    ),
                   ),
                 ],
               ),

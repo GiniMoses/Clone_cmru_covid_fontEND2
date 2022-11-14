@@ -49,6 +49,7 @@ class _CmruCovidTestState extends State<CmruCovidTest> {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
                 //crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Column(
@@ -79,20 +80,12 @@ class _CmruCovidTestState extends State<CmruCovidTest> {
                     ],
                   ),
                   Column(
-                    // crossAxisAlignment: CrossAxisAlignment.start,
-                    // mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
                         "v.10.0-beta1",
                         textAlign: TextAlign.end,
                         style: TextStyle(color: Colors.white),
                       ),
-                      Container(
-                          // padding: EdgeInsets.all(
-                          //     20), //You can use EdgeInsets like above
-                          // margin: EdgeInsets.all(5),
-
-                          ),
                     ],
                   ),
                 ],

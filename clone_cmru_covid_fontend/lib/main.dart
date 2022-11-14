@@ -1,10 +1,13 @@
 import 'dart:isolate';
-
 import 'package:clone_cmru_covid_fontend/screen/cmru_covid_test.dart';
 import 'package:clone_cmru_covid_fontend/screen/home_screen.dart';
-import 'package:clone_cmru_covid_fontend/screen/reportcovid.dart';
+import 'package:clone_cmru_covid_fontend/screen/listcovidtest.dart';
 import 'package:clone_cmru_covid_fontend/screen/stirck.dart';
 import 'package:flutter/material.dart';
+import 'screen/get_queue.dart';
+import 'screen/pcrtest.dart';
+import 'screen/rapidtest.dart';
+import 'screen/reportcovid.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,9 +37,14 @@ class MyApp extends StatelessWidget {
         // When navigating to the "/" route, build the FirstScreen widget.
         '/': (context) => const HomeScreen(),
         // When navigating to the "/second" route, build the SecondScreen widget.
-        '/cmrucovidtest': (context) => const CmruCovidTest(),
-        '/reportcovid': (context) => const reportcovid(),
+        '/getcard': (context) => const GetQueue(),
+        '/rapidtest': (context) => const RapidTest(),
         '/stricker': (context) => const StrickerScreen(),
+        '/pcrtest': (context) => const PcrTest(),
+        '/getcard': (context) => const GetQueue(),
+        '/reportcovid': (context) => const ReportCovid(),
+        '/cmrucovidtest': (context) => const CmruCovidTest(),
+        '/listcovidtest': (context) => const ListCovidTest(),
       },
     );
   }
